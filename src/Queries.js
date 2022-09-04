@@ -408,7 +408,98 @@ query GetOrderById($orderId: ID) {
   }
 }
 `
+export const QUERY_ALL_URBAN =gql`
+query GetAllVendor {
+  getAllVendor {
+    id
+    role
+    fName
+    lName
+    contact
+    email
+    shopName
+    shopContact
+    shopEmail
+    shopCode
+    shopAdress
+    shopCity
+    shopState
+    shopPincode
+    gstNo
+    shopImage
+    villagerOccupation
+    villagerAddress
+    villagerVillageName
+    villagerDistrict
+    villagerState
+    villagerPincode
+    userName
+    password
+    contactVerify
+    emailVerify
+    createDateTime
+    status
+    blockStatus
+  }
+}
 
+`
+export const QUERY_ALL_DELIVERY_BOY =gql`
+query Query {
+  getAllDeliveryBoy {
+    id
+    fName
+    lName
+    email
+    contact
+    alternativeContact
+    idNo
+    idType
+    uniqueId
+    image
+    createDateTime
+    emailVerify
+    pincode
+    city
+    state
+    address
+    district
+    contactVerify
+    userName
+    password
+    status
+  }
+}
+`
+
+export const QUERY_DELIVERY_BOY_BY_ID =gql`
+query Query($deliveryId: ID) {
+  getDeliveryBoyById(deliveryId: $deliveryId) {
+    id
+    fName
+    lName
+    email
+    contact
+    alternativeContact
+    idNo
+    idType
+    uniqueId
+    image
+    createDateTime
+    emailVerify
+    pincode
+    city
+    state
+    address
+    district
+    contactVerify
+    userName
+    password
+    status
+  }
+}
+
+`
 
 //++++++++++++++++++++++++++++++++++++++++++++++ Mutations +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -538,4 +629,35 @@ mutation AdminLogin($userName: String, $password: String) {
     adminId
   }
 }
+`
+
+export const MUTATION_ADD_DELIVERY=gql`
+mutation Mutation($deliveryBoyInput: deliveryBoyInput) {
+  createdeliveryBoy(DeliveryBoyInput: $deliveryBoyInput) {
+    id
+   
+
+  }
+}
+
+`
+
+export const MUTATION_EDIT_DELIVERY_BOY =gql`
+mutation Mutation($deliveryEditInput: deliveryEditInput) {
+  deliveryBoyEdit(DeliveryEditInput: $deliveryEditInput) {
+    id
+   
+  }
+}
+
+`
+
+export const MUTATION_DELETE_DELIVERY_BOY =gql`
+mutation DeliveryDelete($deliveryId: ID) {
+  deliveryDelete(deliveryId: $deliveryId) {
+    id
+   
+  }
+}
+
 `

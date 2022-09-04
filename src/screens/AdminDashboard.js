@@ -3,7 +3,7 @@ import React from 'react'
 import {Card} from "react-native-paper"
 
 
-export default function AdminDashboard() {
+export default function AdminDashboard({navigation}) {
   return (
     <View>
 
@@ -13,7 +13,7 @@ export default function AdminDashboard() {
      <View style={{flexDirection:"row",justifyContent:"space-between",marginTop:20}}>
 
      <Card style={{width:"45%",height:"100%",marginLeft:10}}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("Vendor")}>
       <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
 
 <Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
@@ -22,17 +22,19 @@ export default function AdminDashboard() {
       </TouchableOpacity>
      </Card>
      <Card style={{width:"45%",height:"100%",marginRight:10,}}>
+      <TouchableOpacity onPress={()=>navigation.navigate('Service')}>
      <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
      <Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
     <Text style={{color:"#000"}}>All Service</Text>
       </View>
+      </TouchableOpacity>
      </Card>
 
      </View>
      <View style={{flexDirection:"row",justifyContent:"space-between",marginTop:10}}>
 
 <Card style={{width:"45%",height:"100%",marginLeft:10}}>
- <TouchableOpacity>
+ <TouchableOpacity onPress={()=>navigation.navigate('Delivery')}>
  <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
 
 <Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
@@ -41,10 +43,12 @@ export default function AdminDashboard() {
  </TouchableOpacity>
 </Card>
 <Card style={{width:"45%",height:"100%",marginRight:10,}}>
+  <TouchableOpacity onPress={()=>navigation.navigate('User')}>
 <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
 <Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
 <Text style={{color:"#000"}}>All User</Text>
  </View>
+ </TouchableOpacity>
 </Card>
 
 </View>
