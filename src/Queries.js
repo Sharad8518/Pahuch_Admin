@@ -500,6 +500,100 @@ query Query($deliveryId: ID) {
 }
 
 `
+export const QUERY_GET_ALL_PRODUCT_VENDOR_BY_ID = gql`
+query GetAllProductVendorById($vendorId: ID) {
+  getAllProductVendorById(vendorId: $vendorId) {
+    id
+    productName
+    productDescription
+    productBuyingPrice
+    productionSellingPrice
+    productStockAvailable
+    productStockType
+    productWeight
+    productWeightType
+    productExpiration
+    productExpirationDate
+    productExpirationType
+    productCategory
+    productImages
+    medicineBrandName
+    medicineManufacture
+    medicineTaxNo
+    medicineHsnCode
+    medicineSku
+    medicineTags
+    medicineGst
+    bakeryFlavour
+    bakeryType
+    bakeryVegNonVeg
+    garmentType
+    garmentSize
+    garmentSizeType
+    toyAgeRequre
+    crockeryType
+    electronicType
+    cosmeticType
+    produteCreatedDateTime
+    productUploader
+    menuCategory
+    vendorId
+    vendorStatus
+    status
+  }
+}
+
+
+`
+
+export const QUERY_PRODUCT_RURAL_BY_ID =gql`
+query GetALLRuralById($ruralId: ID) {
+  getALLRuralById(ruralId: $ruralId) {
+    id
+    productName
+    productDescription
+    categary
+    productImages
+    villageName
+    productionSellingPrice
+    district
+    state
+    sellType
+    productStockAvailable
+    status
+    createDateTime
+    ruralId
+  }
+}
+
+
+
+`
+
+export const QUERY_RURAL_PRODUCT =gql`
+query GetRuralProductById($productId: ID) {
+  getRuralProductById(productId: $productId) {
+    id
+    productName
+    productDescription
+    categary
+    productImages
+    villageName
+    productionSellingPrice
+    district
+    state
+    sellType
+    productStockAvailable
+    status
+    createDateTime
+    ruralId
+  }
+}
+`
+
+
+
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++ Mutations +++++++++++++++++++++++++++++++++++++++++++++++++++++
 

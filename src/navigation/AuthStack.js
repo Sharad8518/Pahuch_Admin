@@ -20,7 +20,12 @@ import ViewDelivery from '../screens/Delivery/ViewDelivery';
 import AddDelivery from '../screens/Delivery/AddDelivery';
 import DeliveryBoyDetail from '../screens/Delivery/DeliveryBoyDetail';
 import DeliveryBoyEdit from '../screens/Delivery/DeliveryBoyEdit';
-
+import ViewRuralDetail from '../screens/Vendor/ViewRuralDetail';
+import ViewUrbanDetail from '../screens/Vendor/ViewUrbanDetail';
+import ViewRuralProduct from '../screens/Vendor/ViewRuralProduct';
+import ViewUrbanProduct from '../screens/Vendor/ViewUrbanProduct';
+import VendorProductDetail from '../screens/Vendor/VendorProductDetail';
+import RuralProductDetail from '../screens/Vendor/RuralProductDetail';
 const Stack = createNativeStackNavigator();
 
 const AuthStack = () => {
@@ -42,8 +47,14 @@ const AuthStack = () => {
               <Stack.Screen component={ViewUrban} name='ViewUrban' />
               <Stack.Screen component={AddDelivery} name='AddDelivery' />
               <Stack.Screen component={ViewDelivery} name='ViewDelivery' />
+              <Stack.Screen component={ViewRuralDetail} name='ViewRuralDetail' />
               <Stack.Screen component={DeliveryBoyDetail} name='DeliveryBoyDetail' />
               <Stack.Screen component={DeliveryBoyEdit} name='DeliveryBoyEdit' />
+              <Stack.Screen component={ViewUrbanDetail} name='ViewUrbanDetail' />
+              <Stack.Screen component={ViewRuralProduct} name='ViewRuralProduct' />
+              <Stack.Screen component={ViewUrbanProduct} name='ViewUrbanProduct' />
+              <Stack.Screen component={VendorProductDetail} name='VendorProductDetail' />
+              <Stack.Screen component={RuralProductDetail} name='RuralProductDetail' />
             </> :
             
   

@@ -5,11 +5,17 @@ import { useQuery } from '@apollo/client'
 import Feather from 'react-native-vector-icons/Feather'
 import { QUERY_ALL_URBAN } from '../../Queries'
 
-export default function ViewRural() {
+export default function ViewRural({navigation}) {
+
+ 
 
     const { data, loading } = useQuery(QUERY_ALL_URBAN)
 
+
+    
     console.log(data)
+
+
 
     return (
         <>
@@ -43,6 +49,7 @@ export default function ViewRural() {
                                 data && data.getAllVendor.filter(data => data.role === "Rural").map(iData => {
                                     return (
                                         <Card style={{ width: "90%", elevation: 8 }}>
+                                            <TouchableOpacity onPress={()=>navigation.navigate("ViewRuralDetail",{vendorId:iData.id})}>
                                             <View style={{ flexDirection: "row" }}>
                                                 <View style={{ marginLeft: 10 }}>
                                                     <Image source={{ uri: "https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5f76d7cb690e57c164388d32_Artboard%208.png" }} style={{ width: 120, height: 130 }} />
@@ -66,6 +73,7 @@ export default function ViewRural() {
                                                     </View>
                                                 </View>
                                             </View>
+                                            </TouchableOpacity>
                                         </Card>
 
                                     )
