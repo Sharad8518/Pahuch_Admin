@@ -22,7 +22,7 @@ export default function AdminDashboard({navigation}) {
       </TouchableOpacity>
      </Card>
      <Card style={{width:"45%",height:"100%",marginRight:10,}}>
-      <TouchableOpacity onPress={()=>navigation.navigate('Service')}>
+      <TouchableOpacity onPress={()=>navigation.navigate('ViewService')}>
      <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
      <Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
     <Text style={{color:"#000"}}>All Service</Text>
@@ -43,7 +43,7 @@ export default function AdminDashboard({navigation}) {
  </TouchableOpacity>
 </Card>
 <Card style={{width:"45%",height:"100%",marginRight:10,}}>
-  <TouchableOpacity onPress={()=>navigation.navigate('User')}>
+  <TouchableOpacity onPress={()=>navigation.navigate('ViewUser')}>
 <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
 <Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
 <Text style={{color:"#000"}}>All User</Text>

@@ -591,6 +591,102 @@ query GetRuralProductById($productId: ID) {
 }
 `
 
+export const QUERY_GET_ALL_USER =gql`
+query Query {
+  getAllUser {
+    id
+    fName
+    lName
+    email
+    contact
+    createDateTime
+    displayPic
+    state
+    profileImg
+    pincode
+    district
+    address
+    city
+    userName
+    password
+    multipLeAddress
+    status
+  }
+}
+`
+export const QUERY_GET_USER_BY_ID =gql`
+query Query($userId: ID) {
+  getUserById(userId: $userId) {
+    id
+    fName
+    lName
+    email
+    contact
+    createDateTime
+    displayPic
+    state
+    profileImg
+    pincode
+    district
+    address
+    city
+    userName
+    password
+    multipLeAddress
+    status
+  }
+} 
+`
+
+export const QUERY_ALL_SERVICE =gql`
+query Query {
+  getAllService {
+    id
+    fName
+    lName
+    email
+    contact
+    occupation
+    alternativeContact
+    serviceImg
+    services
+    displayPic
+    workExperience
+    password
+    createDateTime
+    pincode
+    state
+    city
+    address
+    status
+  }
+}
+`
+
+export const QUERY_GET_SERVICE_BY_ID =gql`
+query Query($serviceId: ID) {
+  getServiceProviderById(serviceId: $serviceId) {
+    id
+    fName
+    lName
+    email
+    contact
+    occupation
+    alternativeContact
+    serviceImg
+    services
+    displayPic
+    workExperience
+    password
+    createDateTime
+    pincode
+    state
+    city
+    address
+    status
+  }
+}
+`
 
 
 

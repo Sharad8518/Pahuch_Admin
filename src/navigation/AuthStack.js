@@ -12,7 +12,7 @@ import { QUERY_VENDOR_BY_ID } from '../Queries';
 import Service from "../screens/Service"
 import Vendor from "../screens/Vendor"
 import Delivery from "../../src/screens/Delivery/Delivery"
-import User from "../screens/User"
+
 import ViewRural from '../screens/Vendor/ViewRural';
 import ViewUrban from '../screens/Vendor/ViewUrban';
 import AdminDashboard from '../screens/AdminDashboard';
@@ -26,6 +26,14 @@ import ViewRuralProduct from '../screens/Vendor/ViewRuralProduct';
 import ViewUrbanProduct from '../screens/Vendor/ViewUrbanProduct';
 import VendorProductDetail from '../screens/Vendor/VendorProductDetail';
 import RuralProductDetail from '../screens/Vendor/RuralProductDetail';
+import ViewService from '../screens/Service/ViewService';
+
+import ServiceDetail from '../screens/Service/ServiceDetail';
+
+import ViewUser from '../screens/User/ViewUser';
+import UserDetail from '../screens/User/UserDetail';
+
+
 const Stack = createNativeStackNavigator();
 
 const AuthStack = () => {
@@ -42,7 +50,6 @@ const AuthStack = () => {
               <Stack.Screen component={Service} name='Service' />
               <Stack.Screen component={Delivery} name='Delivery' />
               <Stack.Screen component={Vendor} name='Vendor' />
-              <Stack.Screen component={User} name='User' />
               <Stack.Screen component={ViewRural} name='ViewRural' />
               <Stack.Screen component={ViewUrban} name='ViewUrban' />
               <Stack.Screen component={AddDelivery} name='AddDelivery' />
@@ -55,6 +62,10 @@ const AuthStack = () => {
               <Stack.Screen component={ViewUrbanProduct} name='ViewUrbanProduct' />
               <Stack.Screen component={VendorProductDetail} name='VendorProductDetail' />
               <Stack.Screen component={RuralProductDetail} name='RuralProductDetail' />
+              <Stack.Screen component={ViewService} name='ViewService' />
+              <Stack.Screen component={ServiceDetail} name='ServiceDetail' />
+              <Stack.Screen component={ViewUser} name='ViewUser' />
+              <Stack.Screen component={UserDetail} name='UserDetail' />
             </> :
             
   
