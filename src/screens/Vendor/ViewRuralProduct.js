@@ -1,8 +1,8 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, ActivityIndicator } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity, ActivityIndicator,TextInput } from 'react-native'
 import React,{useState,useEffect} from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { useQuery } from '@apollo/client'
-
+import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import {  QUERY_PRODUCT_RURAL_BY_ID } from '../../Queries'
@@ -29,6 +29,13 @@ export default function ViewRuralProduct({navigation,route}) {
           <FontAwesome name="arrow-left" size={20} color="#11A05F" style={{ marginHorizontal: 5 }} />
         </TouchableOpacity>
       </View>
+
+      <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center",marginTop:10}}>
+   <View style={{width:"95%",flexDirection:"row",borderWidth:2,borderColor:"#2ecc71",borderRadius:10}}>
+    <Feather name="search"  size={25} style={{margin:10}}  color="#2ecc71"/>
+    <TextInput placeholder='Search..'  />
+   </View>
+   </View>
 
       {
         data && data.getALLRuralById.length === 0 ?

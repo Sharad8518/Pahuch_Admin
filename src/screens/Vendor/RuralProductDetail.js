@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View ,Image,ScrollView,TouchableOpacity,ActivityIndicator} from 'react-native'
+import { Text, StyleSheet, View ,Image,ScrollView,TouchableOpacity,ActivityIndicator,TextInput} from 'react-native'
 import React, { Component } from 'react'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Moment from 'react-moment';
