@@ -145,19 +145,15 @@ export default function DeliveryBoyEdit({navigation,route}) {
           </View>
 
           <View style={styles.inputContainer}>
-            <FontAwesome name="home" color='#fff' size={20} style={styles.inputIcon} />
+            <FontAwesome name="map-marker" color='#fff' size={20} style={styles.inputIcon} />
             <TextInput placeholder="State" placeholderTextColor="#fff" style={styles.input} onChangeText={(value) => setState(value)} value={state}/>
           </View>
           <View style={styles.inputContainer}>
-            <FontAwesome name="home" color='#fff' size={20} style={styles.inputIcon} />
+            <FontAwesome name="map-marker" color='#fff' size={20} style={styles.inputIcon} />
             <TextInput placeholder="Pincode" placeholderTextColor="#fff" style={styles.input} onChangeText={(value) => setPincode(value)}  value={pincode}/>
           </View>
 
-          <View style={styles.inputContainer}>
-            <FontAwesome name="home" color='#fff' size={20} style={styles.inputIcon} />
-            <TextInput placeholder="Password" placeholderTextColor="#fff" style={styles.input} onChangeText={(value) => setPassword(value)} />
-          </View>
-
+         
           <TouchableOpacity onPress={() =>submitHandel()}>
             <View
               style={{ backgroundColor: 'black', alignItems: 'center', justifyContent: 'center', borderRadius: 15, padding: 15, marginBottom: 30, marginTop: 15, marginHorizontal: 55 }}>

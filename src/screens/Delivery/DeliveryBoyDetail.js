@@ -90,7 +90,7 @@ export default function DeliveryBoyDetail({navigation,route}) {
     </View>
 
 
-   <View style={{flexDirection:"column",marginTop:10}}>
+   <View style={{flexDirection:"column",marginTop:5}}>
    
 
 
@@ -108,12 +108,12 @@ export default function DeliveryBoyDetail({navigation,route}) {
 
 
    <View style={{flexDirection:"row",marginTop:5}}>
-   <Text style={{marginLeft:10,color:"#2ecc71",fontWeight:"bold"}}>Id Proof :</Text>
+    <FontAwesome name="vcard-o"  size={18} color="#27ae60" style={{marginLeft:10}}/>
    <Text style={{marginLeft:10,fontSize:15,color:"#000",marginLeft:10}}>{data && data.getDeliveryBoyById.idType}</Text>
    </View>
 
    <View style={{flexDirection:"row",marginTop:5}}>
-   <Text style={{marginLeft:10,color:"#2ecc71",fontWeight:"bold"}}>Id Number :</Text>
+   <FontAwesome name="vcard-o"  size={18} color="#27ae60" style={{marginLeft:10}}/>
    <Text style={{marginLeft:10,fontSize:15,color:"#000",marginLeft:10}}>{data && data.getDeliveryBoyById.idNo}</Text>
    </View>
    </View>

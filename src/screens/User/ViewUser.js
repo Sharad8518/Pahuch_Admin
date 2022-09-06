@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity, ActivityIndicator } from 'react-native'
 import React,{useState,useEffect} from 'react'
-import { ScrollView } from 'react-native-gesture-handler'
+import { ScrollView, TextInput } from 'react-native-gesture-handler'
 import { useQuery } from '@apollo/client'
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -15,9 +15,19 @@ export default function ViewUser({navigation}) {
   return (
     <>
     <View style={{flexDirection:"row",justifyContent:"space-between",backgroundColor:"#fff"}}>
+      <TouchableOpacity onPress={()=>navigation.goBack()}>
     <Feather name="arrow-left"  size={30} style={{margin:10}} color="#27ae60"/>
+    </TouchableOpacity>
    </View>
-   
+     <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
+      <View style={{width:"95%",borderWidth:2,borderColor:"#2ecc71",marginTop:10,flexDirection:"row",borderRadius:10}}>
+      <Feather name="search"  size={25} style={{margin:10}} color="#27ae60"/>
+        <TextInput placeholder='Search..'  />
+      </View>
+     </View>
+
+
+              <ScrollView>
                <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
                 
                  { data && data.getAllUser.map(service=>{
@@ -48,7 +58,7 @@ export default function ViewUser({navigation}) {
 
                  }) }
    </View>
-   
+   </ScrollView>
    </>
 
 

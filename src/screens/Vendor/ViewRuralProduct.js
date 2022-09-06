@@ -16,7 +16,7 @@ export default function ViewRuralProduct({navigation,route}) {
 
     const{data,loading} = useQuery(QUERY_PRODUCT_RURAL_BY_ID,{
         variables:{
-            "ruralId": "62fc6ebc958736deb0838567"
+            "ruralId": `${vendorId}`
         }
     })
 
