@@ -1,11 +1,18 @@
 import { View, Text , TouchableOpacity ,Image} from 'react-native'
-import React from 'react'
+import React ,{useContext}from 'react'
 import {Card} from "react-native-paper"
-
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import { AuthContext } from '../context/AuthContext';
 
 export default function AdminDashboard({navigation}) {
+  const { logOut } = useContext(AuthContext);
   return (
     <View>
+      <View style={{flexDirection:"row",justifyContent:"flex-end",backgroundColor:"#fff"}}>
+        <TouchableOpacity onPress={()=>logOut()}>
+       <MaterialCommunityIcons name="logout" size={30} style={{margin:10}}  color="#000"/>
+      </TouchableOpacity>
+      </View>
 
       <View style={{flexDirection:"row",justifyContent:"center",marginTop:100}}>
       <Text style={{color:"#000"}}>Admin Dashboard</Text>

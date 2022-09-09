@@ -14,7 +14,7 @@ const THEME_COLOR = '#fff';
 
 export default function LoginScreennew({ navigation }) {
 
-    const { loginHandle, loginError, emptyError, vendorLoginLoading, serviceLoginLoading } = useContext(AuthContext);
+    const { loginHandle, loginError, emptyError, adminLoginLoading } = useContext(AuthContext);
 
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
@@ -44,7 +44,7 @@ export default function LoginScreennew({ navigation }) {
                         </View>
                     </View>
 
-                    {/* {
+                    {
                         emptyError ?
 
                             <View style={{ justifyContent: 'center', marginTop: 20 }}>
@@ -52,21 +52,19 @@ export default function LoginScreennew({ navigation }) {
                             </View> :
                             <Text></Text>
                     }
-                    { */}
-                        {/* loginError ?
+                    {
+                       loginError ?
 
                             <View style={{ justifyContent: 'center', marginTop: 20 }}>
                                 <Text style={{ color: '#e74c3c', fontSize: 12, fontWeight: 'bold' }}>Incorrect Password</Text>
                             </View> :
                             <Text></Text>
-                    } */}
+                       }
 
                     <View style={styles.button}>
                         {
-                            // vendorLoginLoading ?
-                            //     <ActivityIndicator size="large" color="#000" /> :
-                            //     serviceLoginLoading ?
-                            //         <ActivityIndicator size="large" color="#000" /> :
+                            adminLoginLoading ?
+                                <ActivityIndicator size="large" color="#000" /> :
                                     <TouchableOpacity onPress={() => loginHandle(userName, password, loginType)}>
                                         <LinearGradient colors={['#16a085', '#8e44ad']} style={styles.signIn}>
                                             <Text style={styles.textSign}>

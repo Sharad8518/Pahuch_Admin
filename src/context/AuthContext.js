@@ -97,8 +97,9 @@ export const AuthProvider = ({ children }) => {
             // vendorLoginLoading,
             userInfo,
             logOut,
+            adminLoginLoading
             // serviceLoginLoading,
-            serviceUserInfo,
+
          
         }}>
             {children}

@@ -126,6 +126,9 @@ export default function LoginVendorOptionsScreen({ navigation }) {
 
                     </View>
                 </ScrollView>
+
+
+                
                 <TouchableOpacity onPress={() => navigation.navigate('LoginScreennew')}>
                     <View style={{
                         flexDirection: 'row',
