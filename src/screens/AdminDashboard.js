@@ -9,6 +9,9 @@ export default function AdminDashboard({navigation}) {
   return (
     <View>
       <View style={{flexDirection:"row",justifyContent:"flex-end",backgroundColor:"#fff"}}>
+
+     
+
         <TouchableOpacity onPress={()=>logOut()}>
        <MaterialCommunityIcons name="logout" size={30} style={{margin:10}}  color="#000"/>
       </TouchableOpacity>
@@ -23,7 +26,7 @@ export default function AdminDashboard({navigation}) {
       <TouchableOpacity onPress={()=>navigation.navigate("Vendor")}>
       <View style={{flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
 
-<Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
+    <Image source={{uri:"https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png"}}  style={{width:100,height:100,marginTop:10}}/>
     <Text style={{marginBottom:10,color:"#000"}}>All Vendor</Text>
       </View>
       </TouchableOpacity>
@@ -57,10 +60,7 @@ export default function AdminDashboard({navigation}) {
  </View>
  </TouchableOpacity>
 </Card>
-
 </View>
-
-
-    </View>
+</View>
   )
 }
